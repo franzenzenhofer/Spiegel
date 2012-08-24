@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sinne.getUserAudio demo</title>
+	<style>
+		audio { border: 1px solid gray; background-color:gray; color:black; }
+	</style>
+</head>
+<body>
+	<h1>Sinne.getUserAudio Demo</h1>
+	<p>will probably only work in FF nighty builds (after you enabled getUsereMedia) - as there are no other working implementations (currently)</p>
+	<script src="./../lib/Sinne.js"></script>
+	<script>
+	var errorCallback = function (e) { console.log(e); }
+	
+	var successCallback = function (audio,stream) {
+		window.document.body.appendChild(audio);
+	}
+
+	Sinne.getUserAudio(successCallback, errorCallback, {id:'myfunkyaudio'});
+	</script>
+</body>
+</html> 

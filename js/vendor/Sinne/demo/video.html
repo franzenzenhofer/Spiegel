@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sinne.getUserVideo demo</title>
+</head>
+<body>
+	<script src="./../lib/Sinne.js"></script>
+	<script>
+	var errorCallback = function (e) { console.log(e); }
+	var successCallback = function (video,stream) {
+		window.document.body.appendChild(video);
+	}
+
+	Sinne.getUserVideo(successCallback, errorCallback, {id:'vid'});
+	</script>
+</body>
+</html> 
